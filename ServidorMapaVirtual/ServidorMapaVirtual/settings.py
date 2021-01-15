@@ -56,7 +56,7 @@ CORS_ORIGIN_WHITELIST = [
   'http://localhost:8100',
   'http://192.168.0.8:8100',
 ]
-ALLOWED_HOSTS = ['192.168.0.8', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.8', 'localhost', '127.0.0.1','db']
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -120,8 +120,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'MapaVirtual',
         'USER': 'root',
-        'PASSWORD' : '',
-        'HOST': 'localhost',
+        'PASSWORD' : 'root',
+        'HOST': 'db',
         'PORT': '3306',
     }
 }
