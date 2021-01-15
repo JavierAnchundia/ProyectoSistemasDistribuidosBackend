@@ -48,8 +48,17 @@ services:
   nginx:
     image: nginx
     ports:
-      - 8005:8000
-    
+      - 8080:80
+    volumes:
+      - ./default.conf/nginx/conf.d:/etc/nginx/conf.d
+    depends_on: 
+      - web1
+      - web2
+      - web3
+    links: 
+      - web1
+      - web2
+      - web3
 
 
       
